@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learnAt</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tutor.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="bar" style="width: 20%;" id="icon"><button class="button" type="button" id="navbtn" ><img src="./imgs/icon.png" style="width: auto;height: 6vmin;"></button></div>
+            <div class="bar" style="width: 2%;"></div>
+            <div class="bar" style="width: 6%;" id="home"><button class="button" type="button" id="navbtn" onclick="location.href='./homepage.html'"><b>首頁</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="chat"><button class="button" type="button" id="navbtn" onclick="location.href='./chat.html'"><b>讀趴</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="question"><button class="button" type="button" id="navbtn" onclick="location.href='./question.html'"><b>提問</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="tutor"><button class="button" type="button" id="navbtn" onclick="location.href='./tutor.html'"><b>家教</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="mine"><button class="button" type="button" id="navbtn" onclick="location.href='./mine.html'"><b>我的</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 26%;" id="setting"><button class="button" type="button" id="navbtn" onclick="location.href='./setting.html'"><img id="graysetting" src="./imgs/setting.png" style="width: auto;height: 6vmin;"><img id="bluesetting" src="./imgs/bluesetting.png" style="width: 6vmin;height: auto;"></button></div>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="searchheader">
+        <div class="searchbar">
+            <div class="recommend">
+                推薦
+                <img id="reco-pic" src="./imgs/recommend.png" width="17%" >
+            </div>
+            <input id="findtutor" type="text" name="欄位名稱">
+            <button onclick="floatclick()" id="selectbtn">篩選</button>
+            <img src="./imgs/find.png" id="searchicon" style="width: 2.3vw;height: 2.3vw;" onclick="location.href='./tutor/search'" >
+    
+            <div class="selectbox" id="selectbox" style="display: none;">
+                <div class="address">
+                    <p>地區</p>
+    
+                    <select id="YourLocation">
+                        <option value="Taipei">台北市</option>
+                        <option value="Taoyuan">新北市</option>
+                        <option value="Taoyuan">桃園市</option>
+                        <option value="Taichung">臺中市</option>
+                        <option value="Tainan">臺南市</option>
+                        <option value="Kaohsiung">高雄市</option>
+                        <option value="Hsinchu-County">新竹縣</option>
+                        <option value="Miaoli">苗栗縣</option>
+                        <option value="Changhua">彰化縣</option>
+                        <option value="Nantou">南投縣</option>
+                        <option value="Yunli">雲林縣</option>
+                        <option value="Chiayi-County">嘉義縣</option>
+                        <option value="Pingtung">屏東縣</option>
+                        <option value="Yilan">宜蘭縣</option>
+                        <option value="Hualien">花蓮縣</option>
+                        <option value="Taitung">臺東縣</option>
+                        <option value="Penghu">澎湖縣</option>
+                        <option value="Kinmen">金門縣</option>
+                        <option value="Lienchiang">連江縣</option>
+                        <option value="Keelung-City">基隆市</option>
+                        <option value="Hsinchu-City">新竹市</option>
+                        <option value="Chiayi-City">嘉義市</option>
+                    </select>
+                </div>
+                <div class="hobby">
+                    <p>專長</p>
+                    <input id="inputExpertise" type="text" name="欄位名稱">
+                </div>
+                <img src="./imgs/blackclose.png" id="close" width="3%" onclick = "xclick()" >
+                <button id="confirmbtn" onclick = "resultclick()" ><b>確認</b></button>
+            </div>
+        </div>
+        </div>
+        <div class = "tutor" id ="tutorbefore1" >
+            <img id="tutorpic">
+            <label id ="namelb">姓名：<label id ="name">張偉</label></label>
+            <label id ="agelb">年齡：<label id ="age">20</label></label>
+            <label id ="genderlb">性別：<label id ="gender">男</label></label>
+            <div class="exedu">
+                <label id ="expertiselb">專長：<label id ="expertise">MIS</label></label>
+                <label id ="educationlb">學歷：<label id ="education">大學</label></label>
+            </div>
+            <button id = "chatting" onclick="location.href='./chat.html'">聊聊</button>
+            <div class="line" id="line"></div>
+        </div>
+        
+        <div class = "tutor" id ="tutorbefore2" >
+            <img id="tutorpic">
+            <label id ="namelb">姓名：<label id ="name">張哲</label></label>
+            <label id ="agelb">年齡：<label id ="age">20</label></label>
+            <label id ="genderlb">性別：<label id ="gender">男</label></label>
+            <label id ="expertiselb">專長：<label id ="expertise">MIS</label></label>
+            <label id ="educationlb">學歷：<label id ="education">大學</label></label>
+            <button id = "chatting" onclick="location.href='./chat.html'">聊聊</button>
+            <div class="line" id="line"></div>
+        </div>
+        
+            <div class="tutor" id="tutorbefore3">
+                <img id="tutorpic">
+                <label id="namelb">姓名：<label id="name">林依依</label></label>
+                <label id="agelb">年齡：<label id="age">20</label></label>
+                <label id="genderlb">性別：<label id="gender">男</label></label>
+                <label id="expertiselb">專長：<label id="expertise">MIS</label></label>
+                <label id="educationlb">學歷：<label id="education">大學</label></label>
+                <button id="chatting" onclick="location.href='./chat.html'">聊聊</button>
+                <div class="line" id="line"></div>
+            </div>
+        <div class= "tutorItems"id="tutorItems" style="display: none;">
+            <div class = "tutor" id ="tutorResult" >
+                <img id="tutorpic">
+                <label id ="namelb">姓名：<label id ="name">張偉哲</label></label>
+                <label id ="agelb">年齡：<label id ="age">20</label></label>
+                <label id ="genderlb">性別：<label id ="gender">男</label></label>
+                <div class="exedu">
+                    <label id ="expertiselb">專長：<label id ="expertise">MIS</label></label>
+                    <label id ="educationlb">學歷：<label id ="education">大學</label></label>
+                </div>
+                <button id = "chatting" onclick="location.href='./chat.html'">聊聊</button>
+                <div class="line" id="line"></div>
+            </div>
+            <div class = "tutor" id ="tutorResult" >
+                <img id="tutorpic">
+                <label id ="namelb">姓名：<label id ="name">張偉哲</label></label>
+                <label id ="agelb">年齡：<label id ="age">20</label></label>
+                <label id ="genderlb">性別：<label id ="gender">男</label></label>
+                <label id ="expertiselb">專長：<label id ="expertise">MIS</label></label>
+                <label id ="educationlb">學歷：<label id ="education">大學</label></label>
+                <button id = "chatting" onclick="location.href='./chat.html'">聊聊</button>
+                <div class="line" id="line"></div>
+            </div>
+            
+                <div class="tutor" id="tutorResult">
+                    <img id="tutorpic">
+                    <label id="namelb">姓名：<label id="name">林依依</label></label>
+                    <label id="agelb">年齡：<label id="age">20</label></label>
+                    <label id="genderlb">性別：<label id="gender">男</label></label>
+                    <label id="expertiselb">專長：<label id="expertise">MIS</label></label>
+                    <label id="educationlb">學歷：<label id="education">大學</label></label>
+                    <button id="chatting" onclick="location.href='./chat.html'">聊聊</button>
+                    <div class="line" id="line"></div>
+                </div>
+                <div class="tutor" id="tutorResult">
+                    <img id="tutorpic">
+                    <label id="namelb">姓名：<label id="name">李二二</label></label>
+                    <label id="agelb">年齡：<label id="age">20</label></label>
+                    <label id="genderlb">性別：<label id="gender">男</label></label>
+                    <label id="expertiselb">專長：<label id="expertise">MIS</label></label>
+                    <label id="educationlb">學歷：<label id="education">大學</label></label>
+                    <button id="chatting" onclick="location.href='./chat.html'">聊聊</button>
+                    <div class="line" id="line"></div>
+                </div>
+                <div class="tutor" id="tutorResult">
+                    <img id="tutorpic">
+                    <label id="namelb">姓名：<label id="name">張偉哲</label></label>
+                    <label id="agelb">年齡：<label id="age">20</label></label>
+                    <label id="genderlb">性別：<label id="gender">男</label></label>
+                    <label id="expertiselb">專長：<label id="expertise">MIS</label></label>
+                    <label id="educationlb">學歷：<label id="education">大學</label></label>
+                    <button id="chatting" onclick="location.href='./chat.html'">聊聊</button>
+                    <div class="line" id="line"></div>
+                </div>
+                </div>
+    </div>
+</div>
+</body>
+<script>
+    
+function floatclick(){
+    var a = document.getElementById("selectbtn");
+    var c = document.getElementById("selectbox");
+    if( c.style.display == 'none' ){ // 顯示子選單
+        c.style.display = 'block';
+    }
+ 
+}
+
+function xclick(){
+    
+    var b = document.getElementById("boxclosebtn");
+    var c = document.getElementById("selectbox");
+    if( c.style.display == 'block' ){ // 顯示子選單
+        c.style.display = 'none';
+    }
+ 
+}
+function resultclick(){
+    var c = document.getElementById("selectbox");
+    var d = document.getElementById("tutorItems");
+    var f = document.getElementById("tutorbefore1");
+    var g = document.getElementById("tutorbefore2");
+    var h = document.getElementById("tutorbefore3");
+    
+
+    if( d.style.display == 'none' ){ // 顯示子選單
+        d.style.display = 'block';
+        f.style.display = 'none';
+        g.style.display = 'none';
+        h.style.display = 'none';
+
+    }
+    selectbox.style.display="none";
+   
+}
+
+
+
+
+
+
+</script>
+    
+</html>

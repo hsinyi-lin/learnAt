@@ -1,0 +1,15 @@
+.content{
+    position: absolute;
+    left:24vw;
+    top:10vw;
+}
+#back{
+    background-color: #F2F2F2;
+    font-size: 1.6vw;
+    padding: none;
+    border: none;
+    color:#6797A8
+}
+p{
+    font-size: 1.8vw;
+}

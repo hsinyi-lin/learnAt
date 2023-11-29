@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learnAt</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="bar" style="width: 20%;" id="icon"><button class="button" type="button" id="navbtn" ><img src="./imgs/icon.png" style="width: auto;height: 6vmin;"></button></div>
+            <div class="bar" style="width: 2%;"></div>
+            <div class="bar" style="width: 6%;" id="home"><button class="button" type="button" id="navbtn" onclick="location.href='/'"><b id="homeword">首頁</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="chat"><button class="button" type="button" id="navbtn" onclick="location.href='/chat'"><b>讀趴</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="question"><button class="button" type="button" id="navbtn" onclick="location.href='./question'"><b>提問</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="tutor"><button class="button" type="button" id="navbtn" onclick="location.href='./tutor'"><b>家教</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="mine"><button class="button" type="button" id="navbtn" onclick="location.href='./mine'"><b>我的</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 26%;" id="setting"><button class="button" type="button" id="navbtn" onclick="location.href='./setting'"><img id="graysetting" src="./imgs/setting.png" style="width: auto;height: 6vmin;"><img id="bluesetting" src="./imgs/bluesetting.png" style="width: 6vmin;height: auto;"></button></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="floatbar">
+            <div class="floattxt" id="floattxt" style="display: none;">
+                <ul>
+                    <li>test</li>
+                </ul>
+            </div>
+            <button class="button" id="floatbtn" type="button" onclick="floatclick()">
+                <img id="floatpic" src="./imgs/floatbar.png" style="width: 5vh;height: auto;">
+                <img id="floatclose" src="./imgs/floatclose.png" style="width: 5vh;height: auto;">
+            </button>
+        </div>
+        <p>        
+            <ul class="bxslider">
+                <li><img src="imgs/p01-slider.jpg" /></li>
+                <li><img src="imgs/p02-slider.jpg" /></li>
+                <li><img src="imgs/p03-slider.jpg" /></li>
+                <li><img src="imgs/p04-slider.jpg" /></li>
+            </ul>
+        </p>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="javascript/jquery.bxslider.js"></script>   
+<script src="javascript/my.jquery.bxslider.js"></script> 
+<script src="javascript/homepage.js"></script>
+</html>

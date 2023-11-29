@@ -1,0 +1,120 @@
+html,body{
+    background-color: #fff ;
+}
+div.container{
+    height: 85%;
+    width: 90%;
+    margin: auto 5% 0 5%;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+
+#home{
+    color: rgba(255, 255, 255, 1);
+    background-color: #66d9ff;
+    
+}
+#home b{
+    color: rgba(255, 255, 255, 1);
+}
+#home:hover b{
+    color: rgba(255, 255, 255, 0);
+}
+
+
+div.floatbar{
+    height: 50%;
+    width: 30%;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    z-index: 200;
+}
+div.floattxt{
+    height: 95%;
+    width: 95%;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 300;
+}
+.floattxt li,ul{
+    margin: 5px 10px;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+#floatbtn{
+    border-radius: 3vmin;
+    height: 3vh;
+    width: auto;
+    outline:none;
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    z-index: 400;
+}
+.bx-wrapper{
+    height: 30%;
+    width: 60%;
+    margin: auto;
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+}
+.bxslider img{
+    height: 25vh;
+    width: auto;
+    margin: auto;
+}
+#floatclose{
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: relative;
+    transform-origin: center;
+    z-index: 300;
+}
+#floatpic{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    transform-origin: center;
+}
+#floatbtn{
+    width: 5vmin;
+    height: 5vmin;
+    transition: border-radius 500ms ease-in,transform 500ms ease-in;
+}
+#floatpic,#floatclose{
+    width: 5vmin;
+    height: 5vmin;
+}
+#floatbtn:hover{
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: 6vmin auto;
+    /* -webkit-transform:rotate(360deg); */
+    transform:rotate(180deg);
+    /* -webkit-transition:-webkit-transform 1s linear; */
+    transition:transform 0.5s linear;
+}
+#floatbtn:hover #floatpic{
+    border-radius:50%;
+    transform: rotate(-45deg) scale(0.8);
+}
+#floatbtn:hover #floatclose{
+    border-radius:50%;
+    transform: rotate(-45deg) scale(0.8);
+}

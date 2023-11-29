@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learnAt 我的</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/question.css">
+</head>
+<body>
+    <div class="diming-container" id="diming-container">
+        <div class="reportbox" id="reportbox" style="display: none;">
+            <form>
+                <img id="close" src="./imgs/blackclose.png" width="5%" onclick="closeClick()">
+                <label id ="reasontopic">檢舉原因<br>
+                <input id ="reasonbtn" type="radio"  name="location" value="Taipei"> <label id="reasonitem">以言語或實際攻擊他人</label><br>
+                <input id ="reasonbtn" type="radio" name="location" value="Taoyuan"> <label id="reasonitem">色情暴力及性騷擾</label><br>
+                <input id ="reasonbtn" type="radio" name="location" value="Taoyuan"> <label id="reasonitem">垃圾訊息</label><br>
+                <input id ="reasonbtn" type="radio" name="location" value="Taoyuan"> <label id="reasonitem">散播假消息及不實內容</label><br>
+                <input id ="reasonbtn" type="radio" name="location" value="Taoyuan"> <label id="reasonitem">仇恨及恐怖主義</label><br>
+                <input id ="reasonbtn" type="radio" name="location" value="Taoyuan"> <label id="reasonitem">內容令人噁心</label><br>
+                <input id ="reasonbtn" type="radio" name="location" value="Taoyuan"> <label id="reasonitem">其他</label><br>
+                <button id="send" onclick="sendClick()">送出</button>
+            </form>
+        </div>
+    </div>
+    <div class="header">
+        <div class="navbar">
+            <div class="bar" style="width: 20%;" id="icon"><button class="button" type="button" id="navbtn" ><img src="./imgs/icon.png" style="width: auto;height: 6vmin;"></button></div>
+            <div class="bar" style="width: 2%;"></div>
+            <div class="bar" style="width: 6%;" id="home"><button class="button" type="button" id="navbtn" onclick="location.href='/'"><b id="homeword">首頁</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="chat"><button class="button" type="button" id="navbtn" onclick="location.href='/chat'"><b>讀趴</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="question"><button class="button" type="button" id="navbtn" onclick="location.href='./question'"><b>提問</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="tutor"><button class="button" type="button" id="navbtn" onclick="location.href='./tutor'"><b>家教</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="mine"><button class="button" type="button" id="navbtn" onclick="location.href='./mine'"><b>我的</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 26%;" id="setting"><button class="button" type="button" id="navbtn" onclick="location.href='./setting'"><img id="graysetting" src="./imgs/setting.png" style="width: auto;height: 6vmin;"><img id="bluesetting" src="./imgs/bluesetting.png" style="width: 6vmin;height: auto;"></button></div>
+        </div>
+    </div>
+    <div class="container">
+        <img id="addquestion" src="./imgs/addquestion.png" width="4%" onclick="location.href='./addquestion'">
+        <% for(var i=0; i<items.length; i++) {%>
+        <div class="questionItems">
+            <div class="subItems" onclick="location.href='./answer/<%= items[i].queno %>'">
+                <img id="askericon">
+                <label class="askername" id="askername"><%= items[i].ID %></label>
+                <label class="questiontopic" id="questiontopic"><%= items[i].topic %></label>
+                <label class="questioncontain" id="questioncontain">
+                    <%= items[i].content %>
+                </label>
+            </div>
+            <img id="dot1" class="dot" src="./imgs/dot.png" width="0.6%" onclick="dotclick1()">
+            <div class="line" id="line" ></div>
+            <div class="dotcontain" id = "dotcontain1" style="display: none;">
+                <label id="report" onclick="reportclick()">檢舉</label>
+            </div>
+        </div>
+        <% } %> 
+      
+            
+    </div>
+</body>
+<script src="javascript/question.js"></script>
+<script>
+function dotclick1(){
+    var a = document.getElementById("dot1");
+    var c = document.getElementById("dotcontain1");
+    if( c.style.display == 'none' ){ // 顯示子選單
+        c.style.display = 'block';
+        
+    }
+    else{
+        c.style.display = 'none';
+    }
+ 
+}
+function reportclick(){
+    var c = document.getElementById("reportbox");
+    var d = document.getElementById("diming-container");
+    if( c.style.display == 'none' ){ // 顯示子選單
+        c.style.display = 'block';
+        d.style.display = 'block';
+    }
+    else{
+        c.style.display = 'none';
+        d.style.display = 'none';
+    }
+   
+}
+function closeClick(){
+    var c = document.getElementById("reportbox");
+    var d = document.getElementById("diming-container");
+   
+    if( c.style.display == 'block' ){
+        c.style.display = 'none';
+        d.style.display = 'none';
+    }
+}
+function sendclick(){
+    alert('檢舉成功！');
+ 
+}
+</script>
+</html>

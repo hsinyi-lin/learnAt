@@ -1,0 +1,212 @@
+
+#tutor{
+    background-color: #66d9ff;
+}
+#tutor b{
+    color: rgba(255, 255, 255, 1);
+}
+#tutor:hover b{
+    color: rgba(255, 255, 255, 0);
+}
+div.container{
+    font-size: 1.6vw;
+    
+}
+div.recommend{
+    width: 7vw;
+    color: #c1272d;
+    padding-left:12vw ;
+    padding-top: 1.6vw;
+    padding-bottom: 1vw;
+    position: absolute;
+    
+}
+
+#findtutor{
+    position: absolute;
+    width: 25vw;
+    top:2vw;
+    left: 33vw;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style:none;
+    border-right-style:none;
+    border-color: #E6E6E6;
+    outline: none;
+    font-size: 1.6vw;
+}
+
+div.searchbar{
+    height:5.5vw;
+    width: 96%;
+    border-bottom: 0.1vw   #E6E6E6  solid;
+    text-align: center;
+    position: relative;
+    z-index: 300;
+    margin:0 2vw;
+    
+    
+}
+
+div.select{
+    color:#000;
+    position: relative;
+    top:0.1vw;
+}
+div.selectbox{
+    background-color: #E6E6E6;
+    position: absolute;
+    left: 29vw;
+    top:5vw;
+    height: 250%;
+    width: 40%;
+    font-size: 1.8vw;
+    z-index: 100;
+
+    
+}
+div.selectbox p{
+    position: relative;
+    
+    bottom: -1vw;
+    left: -9vw;
+    line-height: 3vw;
+    color: #999999;
+
+}
+
+#YourLocation{
+    position: absolute;
+    top:3.2vw;
+    right: 15vw;
+    width: 7vw;
+    height: 2.2vw;
+    font-size: 1.5vw;
+    background-color: #E6E6E6;
+}
+#inputExpertise{
+    position: absolute;
+    top:7.2vw;
+    right: 15vw;
+    width: 7vw;
+    height: 2.2vw;
+    font-size: 1.5vw;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style:none;
+    border-right-style:none;
+    border-color: #E6E6E6;
+    outline: none;
+    background-color: #E6E6E6;
+    border-bottom: 0.1vw  #999999 solid;
+}
+#confirmbtn{
+    position: absolute;
+    bottom: 4vw;
+    right: 10vw;
+    height: 2vw;
+    width: 10%;
+    font-size: 1.1vw;
+    background-color: #999999;
+    border: none;
+    color: #fff;
+    padding:none;
+}
+#boxclosebtn{
+    position: absolute;
+    bottom: 11.5vw;
+    left: 32vw;
+    font-size: 1.5vw;
+    height: 2.2vw;
+    width: 2vw;
+    color: #999999;
+    background-color: #E6E6E6;
+    border: none;
+    height: 2vw;
+    width: 2vw;
+}
+#selectbtn{
+    position: absolute;
+    top:1.4vw;
+    left: 60vw;
+    background-color: #fff;
+    border: none;
+    font-size: 1.6vw;
+}
+#searchicon{
+    position: absolute;
+    left: 29vw;
+    top:2vw;
+}
+
+div.tutor{
+    width: 100%;
+    height: 25%;
+    position: relative;
+    line-height: 1vw;
+    text-align: left;
+    background-color:#FFF;
+    
+   
+}
+
+
+#tutorpic{
+    height: 70%;
+    width: 8%;
+    border: 0.1vw gray solid;
+    position: absolute;
+    top:1.5vw;
+    left: 14vw;
+    
+
+}
+
+#namelb,#agelb,#genderlb,#expertiselb,#educationlb{
+    position: absolute;
+    left: 29vw;
+    top:2.3vw;
+}
+#agelb{
+    top:4.7vw;
+}
+#genderlb{
+    top:7vw;
+}
+#expertiselb{
+    left: 43vw;
+}
+#educationlb{
+    left: 43vw;
+    top:4.7vw;
+}
+#chatting{
+    position: absolute;
+    bottom: 3.5vw;
+    right: 20vw;
+    background-color: #6797A8;
+    border: none;
+    color: #fff;
+    height: 32%;
+    width: 6.5%;
+    font-size: 1.6vw;
+}
+#tutorItems{
+    height:100%;
+}
+#line{
+    height: 1%;
+    width: 90%;
+    background-color: #e6e6e6;
+    position: absolute;
+    bottom:0;
+    left:4.5vw;
+}
+div.hobby p{
+    line-height: 1.8vw;
+}
+#close{
+    position: absolute;
+    top:1vw;
+    right: 1vw;
+}

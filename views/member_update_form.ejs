@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learnAt 我的</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/mine.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="bar" style="width: 20%;" id="icon"><button class="button" type="button" id="navbtn" ><img src="/imgs/icon.png" style="width: auto;height: 6vmin;"></button></div>
+            <div class="bar" style="width: 2%;"></div>
+            <div class="bar" style="width: 6%;" id="home"><button class="button" type="button" id="navbtn" onclick="location.href='/'"><b id="homeword">首頁</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="chat"><button class="button" type="button" id="navbtn" onclick="location.href='/chat'"><b>讀趴</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="question"><button class="button" type="button" id="navbtn" onclick="location.href='./question'"><b>提問</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="tutor"><button class="button" type="button" id="navbtn" onclick="location.href='./tutor'"><b>家教</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 6%;" id="mine"><button class="button" type="button" id="navbtn" onclick="location.href='./mine'"><b>我的</b></button></div>
+            <div class="bar" style="width: 4%;"></div>
+            <div class="bar" style="width: 26%;" id="setting"><button class="button" type="button" id="navbtn" onclick="location.href='./setting'"><img id="graysetting" src="/imgs/setting.png" style="width: auto;height: 6vmin;"><img id="bluesetting" src="./imgs/bluesetting.png" style="width: 6vmin;height: auto;"></button></div>
+        </div>
+    </div>
+    <div class="container">
+
+        <ul class="list">
+            <li><button class="btninfo" type="button" id="btninfo" onclick="infoonclick()">個人資料</button></li>
+            <li><button class="btnscore" type="button" id="btnscore" onclick="scoreonclick()">「評」良心</button></li>
+            <li><button class="btnfriend" type="button" id="btnfriend" onclick="friendonclick()">好友</button></li>
+            <li><button class="btnexchange" type="button" id="btnexchange" onclick="exchangeonclick()">兌換獎勵</button>
+            </li>
+        </ul>
+        <div class="content" id="userinfo">
+           
+            <span class="name">ID: </span>
+            <span class="value"><%= item.id %></span>
+        <br/>     
+    
+        </form> 
+            <img id="photo" src="/imgs/photo.jpg" style="float:left;margin: 1vh;">
+            <div class="info">
+                <div class="infotitle" id="name">李知恩</div>
+                <div class="infotitle" id="lv">LV:516</div>
+                <button class="button" type="button" id="edit" onclick="editonclick()">編輯</button>
+            </div>
+            <hr>
+            <div class="detailinfo">
+
+
+                <form action = "/member/update" method = "post">
+                    <div class="form">
+                        <span class="name">ID:</span>
+                        <span class="value"><input type="text" name="id"  value="<%= item.id %>" readonly></span>
+                        <br/>
+
+                        <span class="name">姓名</span>
+                        <span class="value"><input type="text" name="name"  value="<%= item.name %>"></span>
+                        <br/>
+
+                        <span class="name">生日</span>
+                        <span class="value"><input type="date" name="birthday" value="<%= item.birthday %>"></span>
+                        <br/>
+
+                        <span class="name">地址</span>
+                        <span class="value"><input type="text"" name="address" value="<%= item.address %>"></span>
+                        <br/>
+
+                        <span class="name"></span>
+                        <span class="value"><input type="submit" value="更新" ></span>    
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- <div class="content" id="givescore">
+            <div class="scorelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div class="scorecontent">
+                    <div id="name">李知恩</div>
+                    <div class="star" style="font-size: 5vmin;float: left; position: absolute;top: 25%;">
+                        ★★★★✩</div>
+                    <input class="enterscore" type="text"><input class="enterscorebtn" type="submit" value="▶">
+                    <button class="button" type="button" id="edit" onclick="editonclick()">編輯</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="scorelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div class="scorecontent">
+                    <div id="name">李知恩</div>
+                    <div class="star" style="font-size: 5vmin;float: left; position: absolute;top: 25%;">
+                        ★★★★✩</div>
+                    <input class="enterscore" type="text"><input class="enterscorebtn" type="submit" value="▶">
+                    <button class="button" type="button" id="edit" onclick="editonclick()">編輯</button>
+                </div>
+                <hr>
+            </div>
+
+
+        </div>
+        <div class="content" id="friend">
+
+            <div class="friendlist" style="position:relative;">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="name">李知恩</div>
+                <img id="dot" src="./imgs/dot.png" height="18%" width="0.6%" onclick="dotclick()">
+                <div class="line" id="line"></div>
+                <div class="dotcontain" id="dotcontain" style="display: none;">
+                    <label id="report" onclick="reportclick()">檢舉</label>
+                </div>
+            </div>
+            <hr>
+
+
+
+            <div class="friendlist" style="position:relative;">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="name">李知恩</div>
+                <img id="dot" src="./imgs/dot.png" height="18%" width="0.6%" onclick="dotclick()">
+                <div class="line" id="line"></div>
+                <div class="dotcontain" id="dotcontain" style="display: none;">
+                    <label id="report" onclick="reportclick()">檢舉</label>
+                </div>
+
+            </div>
+            <hr>
+            <div class="friendlist" style="position:relative;">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="name">李知恩</div>
+                <img id="dot" src="./imgs/dot.png" height="18%" width="0.6%" onclick="dotclick()">
+                <div class="line" id="line"></div>
+                <div class="dotcontain" id="dotcontain" style="display: none;">
+                    <label id="report" onclick="reportclick()">檢舉</label>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+        <div class="content" id="exchange">
+            <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+            <div class="point">
+                <div id="totalpoint">積分：100</div>
+            </div>
+            <hr>
+            <div class="exchangelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="neadpoint">積分：50</div>
+                <button class="button" type="button" id="exchangeuse" onclick="editonclick()">使用</button>
+                <hr>
+            </div>
+
+
+            <div class="exchangelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="neadpoint">積分：50</div>
+                <button class="button" type="button" id="exchangeuse" onclick="editonclick()">使用</button>
+                <hr>
+            </div>
+            <div class="exchangelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="neadpoint">積分：50</div>
+                <button class="button" type="button" id="exchangeuse" onclick="editonclick()">使用</button>
+                <hr>
+            </div>
+            <div class="exchangelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="neadpoint">積分：50</div>
+                <button class="button" type="button" id="exchangeuse" onclick="editonclick()">使用</button>
+                <hr>
+            </div>
+            <div class="exchangelist">
+                <img id="photo" src="./imgs/photo.jpg" style="float:left;margin: 1vh;">
+                <div id="neadpoint">積分：50</div>
+                <button class="button" type="button" id="exchangeuse" onclick="editonclick()">使用</button>
+                <hr>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+<script src="javascript/mine.js"></script>
+
+</html>

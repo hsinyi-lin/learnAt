@@ -1,0 +1,270 @@
+
+#answer{
+    background-color: #66d9ff;
+}
+#answer b{
+    color: rgba(255, 255, 255, 1);
+}
+#answer:hover b{
+    color: rgba(255, 255, 255, 0);
+}
+div.container{
+    height: 89%;
+    width: 60%;
+    margin: auto 20% 0 20%;
+    font-size: 1.6vw;
+}
+div.questionItems{
+    min-height:10vw;
+    width: 100%;
+    position: relative;
+    font-size: 1.5vw;
+    background-color: #fff;
+}
+
+#askericon{
+    height: 2vw;
+    width: 2vw;
+    position: absolute;
+    top:1.8vw;
+    border-radius: 50%;
+    border: 1px grey solid ;
+}
+#askername{
+    position: absolute;
+    top:1.8vw;
+    left:8.8vw; 
+    font-size: 1.5vw;
+}
+#questiontopic{
+    font-size: 1.6vw;
+}
+#line{
+    height: 0.1vw;
+    width: 54vw;
+    background-color: #e6e6e6;
+    position: absolute;
+    bottom:0;
+    left: 3vw;
+}
+label.queno{
+    position: relative;
+    z-index: 10000;
+}
+label.response{
+    position: absolute;
+    bottom:1vw;
+    right: 10vw;
+    color: #b3b3b3;
+}
+div.questall{
+    text-align: left;
+    padding-left: 5.8vw;
+    padding-right: 5.8vw;
+    font-size: 1.4vw;
+    padding-bottom: 10vw;
+    position: relative;
+}
+div.topiccontain{
+    text-align: left;
+    padding-left: 5.8vw;
+    padding-right: 5.8vw;
+    line-height: 2vw;
+    padding-top: 2.7vw;
+    padding-bottom: 0.7vw;
+    position: relative;
+}
+img.dot{
+    position: absolute;
+    right: 5vw;
+    top:1vw;
+    z-index: 900;
+}
+.anscontain{
+    text-align: left;
+    padding-left: 5.8vw;
+    padding-right: 5.8vw;
+    font-size: 1.4vw;
+    padding-bottom: 3vw;
+}
+.textbar{
+    height: 5vw;
+    width: 60%;
+    position: fixed;
+    bottom: 0;
+    background-color:#fff;
+    z-index: 901;
+    
+}
+#msgtext{
+    font-size:1.4vw; 
+    width:58%; 
+    height:2.5vw ;
+    padding-top: 0.8vw;
+    outline: none;
+    border-top-style: none;
+    border-bottom-style: solid;
+    border-left-style:none;
+    border-right-style:none;
+    border-color: #E6E6E6;
+    resize:none;
+    position: absolute;
+    right: 10vw;
+    top:0.8vw;
+}
+
+div.textbar #askericon{
+    left: 5.6vw;
+    top:1.5vw;
+}
+div.textbar #askername{
+    left: 8.5vw;
+    top:1.5vw;
+}
+div.textbar #line{
+    top:0;
+    height: 0.3vw;
+}
+
+div.dotcontain{
+    border: 0.15vw #6796a8 solid ;
+    min-height: 1vw;
+    min-width: 1vw;
+    font-size: 1.4vw;
+    position: absolute;
+    top:1.2vw;
+    right: 6.5vw;
+    color: #6796a8;
+    font-weight: bold;
+    line-height: 3vw;
+    text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+
+.diming-container{ 
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.2);
+    z-index: 201;
+    display: none;
+} 
+div.reportbox{
+    background-color: #fff;
+    height: 35vw;
+    width: 27%;
+    position: fixed;
+    left: 38%;
+    top:13%;
+    text-align: left;
+    line-height: 3.2vw;
+    font-size: 1.4vw;
+    z-index: 600;
+}
+div.reportbox form{
+    padding-left: 2.2vw;
+    padding-top: 1vw;
+    
+}
+#reasonbtn{
+    height: 1.8vw;
+    width: 1.8vw;
+    position: relative;
+    bottom: -0.5vw;
+    z-index: 801;
+}
+input[type="radio"]+label::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.3vw;
+    height: 1.3vw;
+    border-radius: 50%;
+    border: 0.1vw solid #6797a8;
+    position: relative;
+    top:-0.1vw;
+    left: -1vw;
+    padding: .1vw;
+    
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: #6797a8;
+    background-clip: content-box;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0; 
+}
+#reasonitem{
+    font-size: 1.4vw;
+}
+
+#reasontopic{
+    font-size: 1.8vw;
+    padding-left:0.5vw;
+    
+}
+#send{
+    font-size: 1.4vw;
+    position: absolute;
+    right: 3vw;
+    bottom: 3vw;
+    background-color: #6797a8;
+    color: #fff;
+    border:none;
+    padding: 0.3vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+
+#reasonitem{
+    position: relative;
+    left: -1.5vw;
+}
+#boxline{
+    height: 2%;
+    width: 90%;
+    background-color: #6797a8;
+    position: absolute;
+    left: 0.3vw;
+}
+#best{
+    position: relative;
+}
+#star{
+    position: absolute;
+    right: 4vw;
+    top:1vw;
+}
+#bestans{
+    position: absolute;
+    right: 6.5vw;
+    top:1vw;
+    color: #d8d880;
+}
+#responsepic{
+    position: absolute;
+    right: 4vw;
+    top:1.5vw;
+}
+
+.textbar #line{
+    top:0;
+}
+
+#close{
+    position: absolute;
+    right: 1.5vw;
+}
+#sendmge{
+    position: relative;
+    z-index: 100000000;
+    height: 2vw;
+    width: 2vw;
+}

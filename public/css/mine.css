@@ -1,0 +1,75 @@
+
+#mine{
+    background-color: #66d9ff;
+}
+#mine b{
+    color: rgba(255, 255, 255, 1);
+}
+#mine:hover b{
+    color: rgba(255, 255, 255, 0);
+}
+
+#btninfo,#btnscore,#btnfriend,#btnexchange{
+    height: 8vh;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width:2px;
+    border-bottom-color: #E6E6E6;
+    font-size: 1.3vw;
+}
+#btninfo:hover,#btnscore:hover,#btnfriend:hover,#btnexchange:hover{
+    background: rgba(102,217,255,1)!important;
+    color: #ffffff !important;
+}
+
+.content{
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding: 5% 10%;
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+#userinfo{
+    display: none;
+}
+#givescore{
+    display: none;
+}
+#friend{
+    display: none;
+}
+#exchange{
+    display: none;
+}
+#photo{
+    width:auto;
+    height:15vmin;
+    border-radius:100%;
+    position: relative;
+}
+.info{
+    width: 80%;
+    height: 20vh;
+    padding-left: 20vmin;
+    margin: auto;
+}
+.infotitle{
+    width: auto;
+    height: 5vh;
+    padding: 0 5vw;
+    float: left;
+    font-weight: 1000;
+    font-size: 4vmin;
+}
+#lv{
+    clear:both;
+    position: relative;
+    top:-5vh;
+}
+hr{
+    width: 90%;
+    position: relative;
+    left: -5vw;
+}
