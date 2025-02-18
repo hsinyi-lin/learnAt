@@ -10,7 +10,7 @@ LearnAt is a web-based tutoring platform designed to connect students with tutor
 - ❓ **Q&A Section** – Post and answer questions related to various subjects.
 - 💬 **Chat Room** – Engage in real-time communication between students and tutors.
 - 📝 **Profile Management** – Users can create and update their profiles.
-- 
+  
 ## 🛠️ Tech Stack
 
 - **Backend:** Node.js (Express)
